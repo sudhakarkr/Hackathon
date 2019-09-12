@@ -1,0 +1,16 @@
+<nav class="sidebar">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <div class="col-md-12">
+                <label style="display: block;"
+                       class="form-form-control-label required-label">{{ 'Categories' | translate }}
+                </label>
+                <select class="form-control" id="categories" formControlName="categories">
+                    <option disabled selected value> Select</option>
+                    <option *ngFor="let item of productCategories" value="{{item.id}}">{{item.desc}}</option>
+                </select>
+
+            </div>
+        </a>
+    </div>
+</nav>
